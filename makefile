@@ -3,7 +3,7 @@
 #     commands
 
 slideextractor: SlideExtractor.java
-	javac SlideExtractor.java
-	jar cfe SlideExtractor.jar SlideExtractor SlideExtractor.class
+	javac -verbose -cp .:./libs/poi-bin-5.1.0/* SlideExtractor.java
+	jar cfm SlideExtractor.jar Manifest.txt SlideExtractor.class
 clean:
 	rm -f *.class *.jar
